@@ -17,28 +17,50 @@ body{
 }
 
 /* Main menu */
-.navbar-default .navbar-header{
-  background-color: $primary-color-pink;
-}
-.navbar-default .navbar-collapse{
-  background-color: $primary-color-pink;
-}
-.navbar-default .navbar-collapse li{
-  border-bottom: 1px solid white;
-  text-align: center;
-  a{
-    color:white;
+.navbar-default{
+  .navbar-header{
+    background-color: $primary-color-pink;
+    .navbar-toggle{
+      color: white;
+      font-size: $font-size-base + 8;
+      padding: 0 10px;
+      border: none;   
+      &:hover{
+        background: none;
+      }   
+    }
   }
-}
+  .navbar-collapse{
+    background-color: $primary-color-pink;
+    .navbar-nav{
+      margin-top: 0;
+      margin-bottom: 0;
+      li{
+        border-bottom: 1px solid white;
+        text-align: center;
+        padding: 3px;
+        font-size: $font-size-base + 3;
+        &:hover {
+          background-color: $primary-color-pink-dark;
+        }
+        a{
+          color:white;
+          &:hover {
+            color:white;
+          }
+        }
+        .right-icon{
+          color: white;
+          position: absolute;
+          right: 0px;
+          top:0px;
+          padding: 7px 20px;
+        }        
+      }
+    } 
+  }
 
-
-.navbar-default .navbar-toggle {
-    background-color: red;
 }
-.navbar-default .navbar-toggle .icon-bar {
-    background-color: white;
-}
-
 .description-header{
   background: $primary-color-pink;
   color:white;
