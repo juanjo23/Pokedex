@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app>
+<html ng-app="pokedexApp">
   <head>
     <meta charset="utf-8">
     <meta name="description" content="">
@@ -22,9 +22,7 @@
   <body>
     <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-    <div>El siguiente código es Angular: {{23+43}}</div>
-    
+    <![endif]-->    
     <nav class="navbar navbar-default custom-navbar" role="navigation">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle pull-left" data-toggle="collapse" data-target=".navbar-collapse">
@@ -34,15 +32,15 @@
       <div class="navbar-collapse collapse" >
         <ul class="nav navbar-nav ">
             <li>
-              <a href="#">ALL POKEMON</a>
+              <a href="#/all">ALL POKEMON</a>
               <div class="right-icon"><span class="glyphicon glyphicon-menu-right"></span></div>
             </li>
             <li>
-              <a href="#">CAUGHT A POKEMON</a>
+              <a href="#/caught">CAUGHT A POKEMON</a>
               <div class="right-icon"><span class="glyphicon glyphicon-menu-right"></span></div>
             </li>
             <li>
-              <a href="#">BATTLE BOX</a>
+              <a href="#/battle-box">BATTLE BOX</a>
               <div class="right-icon"><span class="glyphicon glyphicon-menu-right"></span></div>
             </li>
         </ul><!-- /.nav-collapse -->
@@ -51,92 +49,7 @@
 
 
     <div class="container-fluid">
-      <div class="row description-header">
-        <div class="col-md-12 text-center">
-          <div class="go-back">
-            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-          </div>
-          Description Hola
-        </div>
-      </div>
-      <div class="row description-section">
-        <div class="pokemon-image">
-          <img src="images/bulbasaur.png" alt="bulbasaur image" width="130" height="130">
-        </div>
-        <div class="description">
-          <div class="desc-title">
-            #001 Bulbasaur
-            <div class="icons">
-              <img src="images/pokeball.png" width="16">
-              <img src="images/star.png" width="16" >
-            </div>
-          </div>
-          <p>0.7m, 6.9kg</p>
-          <p>
-            Bulbasaur can be seen napping in bright sunlight. There is a seed on its back. By soaking up the sun's rays, the seed grows progressively larger.
-          </p>
-          <span class="tag grass">Grass</span>
-          <span class="tag poison">Poison</span>
-          <span class="tag bug">Bug</span>
-        </div>
-      </div>
-      <div class="row information">
-        <div class="info-title">
-          General Information
-        </div>
-        <div>
-          <table class="table">
-            <tr><td><b>Hidden Abilities</b></td> <td>Clorophyll</td></tr>
-            <tr><td><b>Location</b></td> <td>Lumiose City</td></tr>
-          </table>
-        </div>
-      </div>
-      <div class="row information">
-        <div class="info-title">
-          Evolution
-        </div>
-        <div class="evolution">
-          <div class="evolution-number">#001</div>
-          <div class="evolution-image">
-            <img src="images/bulbasaur.png" alt="bulbasaur image" width="90" height="70">
-          </div>
-          <div class="evolution-info">
-            <div class="evolution-desc">
-              <span class="evolution-name" >Bulbasaur</span>
-              <span class="tag grass">Grass</span>
-              <span class="tag poison">Poison</span>
-              <span class="tag bug">Bug</span>
-            </div>
-          </div>
-        </div>
-        <div class="evolution">
-          <div class="evolution-number">#002</div>
-          <div class="evolution-image">
-            <img src="images/ivysaur.png" alt="Ivysaur image" width="90" height="70">
-          </div>
-          <div class="evolution-info">
-            <div class="evolution-desc">
-              <span class="evolution-name" >Ivysaur <span class="evolution-level">LV.16</span> </span>
-              <span class="tag grass">Grass</span>
-              <span class="tag poison">Poison</span>
-              <span class="tag bug">Bug</span>
-            </div>
-          </div>
-        </div>
-        <div class="evolution">
-          <div class="evolution-number">#003</div>
-          <div class="evolution-image">
-            <img src="images/venusaur.png" alt="bulbasaur image" width="90" height="70">
-          </div>
-          <div class="evolution-info">
-            <div class="evolution-desc">
-              <span class="evolution-name" >Bulbasaur <span class="evolution-level">LV.32</span> </span>
-              <span class="tag grass">Grass</span>
-              <span class="tag poison">Poison</span>
-              <span class="tag bug">Bug</span>
-            </div>
-          </div>
-        </div>
+      <div ng-view>
       </div>
     </div>
     
@@ -144,6 +57,7 @@
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
     <script src="/bower_components/angular/angular.js"></script>
+    <script src="/bower_components/angular-route/angular-route.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     
@@ -163,7 +77,8 @@
     <!-- endbuild -->
     
     <!-- build:js scripts/main.js -->
-    <script src="scripts/main.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/routes.js"></script> 
     <!-- endbuild -->
   </body>
 </html>
