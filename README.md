@@ -1,7 +1,7 @@
 #Pasos a seguir para lograr la implementación de la Pokedex
 
-- [x] Agregar dependencias de Angular, a bower. (Me tardé una hora pero lo logré)
-
-- [ ] Agregar modulo general
-- [ ] Investigar rutas
+- [x] Injectar angular en el index a partir de su instalación en bower.
+- [x] Agregar modulo general
+- [x] Investigar rutas
 - [ ] Agregar un controlador.
+- [ ] Agregar service.
