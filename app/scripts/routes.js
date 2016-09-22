@@ -3,7 +3,7 @@ angular.module('pokedexApp')
 	$routeProvider
 	  .when('/all', {
         templateUrl:'templates/pages/all/index.html',
-        controller: 'PokemonController'
+        controller: 'PokemonController',
         controllerAs: 'pkController'
       })
       .when('/caught', {

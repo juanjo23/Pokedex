@@ -1,76 +1,44 @@
 Todos los pokemons
-<div class="row description-header">
-        <div class="col-md-12 text-center">
-          <div class="go-back">
-            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-          </div>
-          Description Hola <b> {{pokemon.name}} </b>
-        </div>
-      </div>
-      <div class="row description-section">
-        <div class="pokemon-image">
-          <img src="images/bulbasaur.png" alt="bulbasaur image" width="130" height="130">
-        </div>
-        <div class="description">
-          <div class="desc-title">
-            #001 Bulbasaur
-            <div class="icons">
-              <img src="images/pokeball.png" width="16">
-              <img src="images/star.png" width="16" >
-            </div>
-          </div>
-          <p>0.7m, 6.9kg</p>
-          <p>
-            Bulbasaur can be seen napping in bright sunlight. There is a seed on its back. By soaking up the sun's rays, the seed grows progressively larger.
-          </p>
-          <span class="tag grass">Grass</span>
-          <span class="tag poison">Poison</span>
-          <span class="tag bug">Bug</span>
-        </div>
-      </div>
-      <div class="row information">
-        <div class="info-title">
-          General Information
-        </div>
-        <div>
-          <table class="table">
-            <tr><td><b>Hidden Abilities</b></td> <td>Clorophyll</td></tr>
-            <tr><td><b>Location</b></td> <td>Lumiose City</td></tr>
-          </table>
-        </div>
-      </div>
-      <div class="row information">
-        <div class="info-title">
-          Evolution
-        </div>
-        <div class="evolution">
-          <div class="evolution-number">#001</div>
-          <div class="evolution-image">
-            <img src="images/bulbasaur.png" alt="bulbasaur image" width="90" height="70">
-          </div>
-          <div class="evolution-info">
-            <div class="evolution-desc">
-              <span class="evolution-name" >Bulbasaur</span>
-              <span class="tag grass">Grass</span>
-              <span class="tag poison">Poison</span>
-              <span class="tag bug">Bug</span>
-            </div>
-          </div>
-        </div>
-        <div class="evolution">
-          <div class="evolution-number">#002</div>
-          <div class="evolution-image">
-            <img src="images/ivysaur.png" alt="Ivysaur image" width="90" height="70">
-          </div>
-          <div class="evolution-info">
-            <div class="evolution-desc">
-              <span class="evolution-name" >Ivysaur <span class="evolution-level">LV.16</span> </span>
-              <span class="tag grass">Grass</span>
-              <span class="tag poison">Poison</span>
-              <span class="tag bug">Bug</span>
-            </div>
-          </div>
-        </div>
+
+<div class="row pokemon-list">
+  <div class="pokemon-item">
+    <div class="pokemon-item-number">#0{{pokemon.id}}</div>
+    <div class="pokemon-item-image">
+      <img ng-src="images/{{pokemon.image}}" alt="a">
+    </div>
+    <div class="pokemon-item-info">
+      <div class="pokemon-item-desc">
+        <span class="pokemon-item-name">
+          {{ pokemon.name }}
+          <span class="pokemon-item-level">{}{LV.32}</span>
+        </span>
+        <span class="type grass">Grass</span>
+        <span class="type poison">Poison</span>
+        <span class="type bug">Bug</span>
+      </div>      
+    </div>    
+  </div>  
+
+  <div class="pokemon-item">
+    <div class="pokemon-item-number">#0{{pokemon.id}}</div>
+    <div class="pokemon-item-image">
+      <img ng-src="images/{{pokemon.image}}" alt="a">
+    </div>
+    <div class="pokemon-item-info">
+      <div class="pokemon-item-desc">
+        <span class="pokemon-item-name">
+          {{ pokemon.name }}
+          <span class="pokemon-item-level">{}{LV.32}</span>
+        </span>
+        <span class="type grass">Grass</span>
+        <span class="type poison">Poison</span>
+        <span class="type bug">Bug</span>
+      </div>      
+    </div>    
+  </div>  
+</div>
+
+<div class="row information">
         <div class="evolution">
           <div class="evolution-number">#003</div>
           <div class="evolution-image">
