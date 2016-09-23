@@ -12,6 +12,7 @@ body{
 
 /* Main menu */
 .navbar-default{
+  margin-bottom: 0;
   .navbar-header{
     background-color: $primary-color-pink;
     .navbar-toggle{
@@ -103,26 +104,65 @@ body{
 
 .type{
   display: inline-block;
-  width: 60px;
+  width: 50px;
   text-align: center;
   color:white;
   font-size: 12px;
   border-radius: 5px;
-  &.grass{
-    background-color: $color-grass;
-  }
-  &.poison{
-    background-color: $color-poison;
-  }
-  &.bug{
-    background-color: $color-bug;
-  }
+  padding-top: 1px;
+
+  &.Grass   { background-color: $color-grass;    }
+  &.Poison  { background-color: $color-poison;   }
+  &.Bug     { background-color: $color-bug;      }
+  &.Fire    { background-color: $color-fire;     }
+  &.Water   { background-color: $color-water;    }
+  &.Flying  { background-color: $color-flying;   }
+  &.Normal  { background-color: $color-normal;   }
+  &.Dark    { background-color: $color-dark;     }
+  &.Electric{ background-color: $color-electric; }
+  &.Ice     { background-color: $color-ice;      }
+  &.Steel   { background-color: $color-steel;    }
+  &.Ground  { background-color: $color-ground;   }
+  &.Fairy   { background-color: $color-fairy;    }
+
 }
+/** Search bar **/
+.search-bar{
+  padding: 15px 10px;
+  border-bottom: 1px solid $color-light-gray;
+  .search{
+    width:88%;
+    float:left;
+    input{
+      width:100%;
+      border-radius: 5px;
+      padding: 6px;
+      border:1px solid $color-light-gray;
+    }
+  }
+  .sort{
+    width:12%;
+    height: 35px;
+    float: left;
+    text-align: center;
+    padding-top: 3px;
+    img{
+      height: 25px;
+    }
+  }
+  &:after{
+      content: '';
+      display: block;
+      clear: both;
+    }
+}
+/** End search bar **/
+
 
 /** Pokemon list **/
 .pokemon-list{
   .pokemon-item{
-    border-top: 1px solid #ddd;
+    border-bottom: 1px solid $color-light-gray;
     position: relative;
     &:after{
       content: '';
@@ -156,7 +196,7 @@ body{
         .pokemon-item-name{
           font-size: 16px;
           display: block;
-          font-weight: bold;
+          font-weight:bold;
           margin-bottom: 5px;
           margin-top:5px;
           position: relative;
@@ -192,7 +232,7 @@ body{
     }
   }
   .evolution{
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid $color-light-gray;
     position: relative;
     &:after{
       content: '';
@@ -217,10 +257,9 @@ body{
       }
     }
     .evolution-info{
-      width: 70%;
       float:left;
       .evolution-desc{
-        padding: 10px;
+        padding:10px;
         .evolution-name{
           font-size: 16px;
           display: block;

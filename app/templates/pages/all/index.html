@@ -1,56 +1,30 @@
-Todos los pokemons
-
-<div class="row pokemon-list">
-  <div class="pokemon-item">
-    <div class="pokemon-item-number">#0{{pokemon.id}}</div>
-    <div class="pokemon-item-image">
-      <img ng-src="images/{{pokemon.image}}" alt="a">
-    </div>
-    <div class="pokemon-item-info">
-      <div class="pokemon-item-desc">
-        <span class="pokemon-item-name">
-          {{ pokemon.name }}
-          <span class="pokemon-item-level">{}{LV.32}</span>
-        </span>
-        <span class="type grass">Grass</span>
-        <span class="type poison">Poison</span>
-        <span class="type bug">Bug</span>
-      </div>      
-    </div>    
-  </div>  
-
-  <div class="pokemon-item">
-    <div class="pokemon-item-number">#0{{pokemon.id}}</div>
-    <div class="pokemon-item-image">
-      <img ng-src="images/{{pokemon.image}}" alt="a">
-    </div>
-    <div class="pokemon-item-info">
-      <div class="pokemon-item-desc">
-        <span class="pokemon-item-name">
-          {{ pokemon.name }}
-          <span class="pokemon-item-level">{}{LV.32}</span>
-        </span>
-        <span class="type grass">Grass</span>
-        <span class="type poison">Poison</span>
-        <span class="type bug">Bug</span>
-      </div>      
-    </div>    
-  </div>  
+<div class="row search-bar">
+  <div class="search">
+    <input type="text" placeholder="Search..." name="">
+  </div>
+  <div class="sort">
+    <img src="images/filter-results-button.png">
+  </div>
 </div>
 
-<div class="row information">
-        <div class="evolution">
-          <div class="evolution-number">#003</div>
-          <div class="evolution-image">
-            <img src="images/venusaur.png" alt="bulbasaur image" width="90" height="70">
-          </div>
-          <div class="evolution-info">
-            <div class="evolution-desc">
-              <span class="evolution-name" >Bulbasaur <span class="evolution-level">LV.32</span> </span>
-              <span class="tag grass">Grass</span>
-              <span class="tag poison">Poison</span>
-              <span class="tag bug">Bug</span>
-            </div>
-          </div>
-        </div>
-      </div>
+<div class="row pokemon-list">
+  <div ng-repeat="pokemon in pokemons" class="pokemon-item">
+    <div class="pokemon-item-number">#0{{pokemon.id}}</div>
+    <div class="pokemon-item-image">
+      <img ng-src="images/{{pokemon.image}}" alt="a">
+    </div>
+    <div class="pokemon-item-info">
+      <div class="pokemon-item-desc">
+        <span class="pokemon-item-name">
+          {{ pokemon.name }}
+          <span class="pokemon-item-level">{}{LV.32}</span>
+        </span>
+        <span ng-repeat="type in pokemon.types">
+          <span  class="type" ng-class=type.name >{{type.name}}</span>
+        </span>
+        &nbsp;
+      </div>      
+    </div>    
+  </div>
+</div>
+  
