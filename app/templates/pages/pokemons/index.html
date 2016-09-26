@@ -8,7 +8,7 @@
 </div>
 
 <div class="pokemon-list">
-  <div ng-repeat="pokemon in pokemons | orderBy:id:reverse | filter:search" class="row pokemon-item">
+  <div ng-repeat="pokemon in pokemons | orderBy:id:reverse | filter:search" class="row pokemon-item" ng-click="showDescription()">
     <div class="col-xs-3 pokemon-item-image">
         <img ng-src="images/{{pokemon.image}}" alt="Pokemon image">
     </div>          

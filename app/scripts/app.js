@@ -22,9 +22,15 @@ angular.module('pokedexApp', ['ngRoute'])
 .config(['$routeProvider', function($routeProvider){
 //.config(function($routeProvider){
 	$routeProvider
-	  .when('/all', {
-        templateUrl:'templates/pages/all/index.html',
+	  .when('/pokemons', {
+        templateUrl:'templates/pages/pokemons/index.html',
         controller: 'PokemonController',
+        controllerAs: 'pkController'
+      })
+      .when('/pokemons/:id', {
+      	templateUrl:'templates/pages/pokemons/index.html',        
+        controller: 'PokemonController',
+      	controller: 'PokemonController',
         controllerAs: 'pkController'
       })
       .when('/caught', {
