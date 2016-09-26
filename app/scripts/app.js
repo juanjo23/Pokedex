@@ -27,12 +27,14 @@ angular.module('pokedexApp', ['ngRoute'])
         controller: 'PokemonController',
         controllerAs: 'pkController'
       })
+      /*
       .when('/pokemons/:id', {
-      	templateUrl:'templates/pages/pokemons/index.html',        
+      	templateUrl:'templates/pages/pokemons/show.html',        
         controller: 'PokemonController',
       	controller: 'PokemonController',
         controllerAs: 'pkController'
       })
+      */
       .when('/caught', {
         templateUrl:'templates/pages/caught/index.html'
       })
@@ -40,6 +42,6 @@ angular.module('pokedexApp', ['ngRoute'])
       	templateUrl:'templates/pages/battle-box/index.html'
       })
       .otherwise({
-        redirectTo: '/all'
+        redirectTo: '/'
       });
 }]);

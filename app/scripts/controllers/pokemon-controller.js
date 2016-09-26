@@ -2,8 +2,13 @@ angular.module('pokedexApp')
 .controller('PokemonController', ['$scope', function PokemonController($scope) {
 	
 	$scope.reverse = false;
-	$scope.sort = function() {
+	$scope.sort = function(id) {
+		alert("Hola");
 		$scope.reverse = !$scope.reverse;
+    };
+
+    $scope.showDesc = function(id){
+    	alert("Seleccionaste a:" + pokemons[id].name);
     };
 
 	$('#nav-title').text('All Pokémon');
@@ -195,6 +200,7 @@ angular.module('pokedexApp')
 	]
 
 	$scope.pokemons = pokemons;	
+
 	/*
 	var controller = this;
 	$http({method: 'GET', url: '/all'}).success(function(data){
