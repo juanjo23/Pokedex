@@ -1,15 +1,19 @@
 angular.module('pokedexApp')
 .controller('PokemonController', ['$scope', function PokemonController($scope) {
-	$scope.hola = 'WILL BE FOREVER';
-	$('#nav-title').text('All Pokémon');	    
+	
+	$scope.reverse = false;
+	$scope.sort = function() {
+		$scope.reverse = !$scope.reverse;
+    };
 
-	$scope.pokemons = [
+	$('#nav-title').text('All Pokémon');
+	var pokemons = [
 		{
 		    'id': 1,
 		    'name': 'Bulbasaur',
 		    'image': '001Bulbasaur.png',
 		    'types': [
-		        { 'name': 'Grass' }, { 'name': 'Poison' }
+		        { 'name': 'Grass' }, { 'name': 'Poison' }		        
 		    ]
 		},
 		{
@@ -189,6 +193,8 @@ angular.module('pokedexApp')
 		    ]
 		}
 	]
+
+	$scope.pokemons = pokemons;	
 	/*
 	var controller = this;
 	$http({method: 'GET', url: '/all'}).success(function(data){
