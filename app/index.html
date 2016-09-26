@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Pokedex</title>
+    <title>Pokédex | Angular Project Bootcamp</title>
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
@@ -17,7 +17,12 @@
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
-    
+    <style>     
+      .pokedex-title{
+        
+
+      }
+    </style>
   </head>
   <body>
     <!--[if lt IE 10]>
@@ -27,21 +32,21 @@
       <div class="navbar-header">
         <button type="button" class="navbar-toggle pull-left" data-toggle="collapse" data-target=".navbar-collapse">
           <span id="menu-icon" class="glyphicon glyphicon-menu-hamburger"></span>
-        </button>    
+        </button>
+        <div class="navbar-brand" id="nav-title">
+          POKÉDEX 
+        </div>
       </div>
       <div class="navbar-collapse collapse" >
         <ul class="nav navbar-nav ">
             <li>
               <a href="#/all">ALL POKEMON</a>
-              <div class="right-icon"><span class="glyphicon glyphicon-menu-right"></span></div>
             </li>
             <li>
               <a href="#/caught">CAUGHT A POKEMON</a>
-              <div class="right-icon"><span class="glyphicon glyphicon-menu-right"></span></div>
             </li>
             <li>
               <a href="#/battle-box">BATTLE BOX</a>
-              <div class="right-icon"><span class="glyphicon glyphicon-menu-right"></span></div>
             </li>
         </ul><!-- /.nav-collapse -->
       </div><!-- /.container -->

@@ -1,3 +1,4 @@
+/*
 angular.module('pokedexApp')
 .config(function($routeProvider){
 	$routeProvider
@@ -16,3 +17,4 @@ angular.module('pokedexApp')
         redirectTo: '/all'
       });
 });
+*/

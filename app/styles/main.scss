@@ -10,6 +10,7 @@ body{
   font-family: 'Helvetica', sans-serif;
 }
 
+
 /* Main menu */
 .navbar-default{
   margin-bottom: 0;
@@ -17,12 +18,22 @@ body{
     background-color: $primary-color-pink;
     .navbar-toggle{
       color: white;
-      font-size: $font-size-base + 8;
+      display:inline-block;
+      font-size: $font-size-base + 8px;
       padding: 0 10px;
       border: none;   
       &:hover{
         background: none;
       }   
+    }
+    .navbar-brand{
+      font-weight:bold;
+      width: 100%;
+      float: left;        
+      text-align: center;
+      color: white !important;
+      margin-left: -59px;
+      font-size: $font-size-base + 4;
     }
   }
   .navbar-collapse{
@@ -31,10 +42,11 @@ body{
       margin-top: 0;
       margin-bottom: 0;
       li{
+        background: url('../images/right-arrow.png') 95% center no-repeat;
         border-bottom: 1px solid white;
         text-align: center;
         padding: 3px;
-        font-size: $font-size-base + 3;
+        font-size: $font-size-base + 2;
         &:hover {
           background-color: $primary-color-pink-dark;
         }
@@ -43,13 +55,6 @@ body{
           &:hover {
             color:white;
           }
-        }
-        .right-icon{
-          color: white;
-          position: absolute;
-          right: 0px;
-          top:0px;
-          padding: 7px 20px;
         }        
       }
     } 
