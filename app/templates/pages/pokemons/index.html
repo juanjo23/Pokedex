@@ -8,29 +8,32 @@
 </div>
 
 <div class="pokemon-list">
-  <div ng-repeat="pokemon in pokemons | orderBy:id:reverse | filter:search" class="row pokemon-item" ng-click="showDesc(pokemon.id)">
-    <div class="col-xs-3 pokemon-item-image">
-        <img ng-src="images/{{pokemon.image}}" alt="Pokemon image">
-    </div>          
-    <div class="col-xs-9 pokemon-item-info">
-      <div class="pokemon-item-number">#0{{pokemon.id}}</div>
-      <span class="pokemon-item-name">
-        {{ pokemon.name }}        
-      </span> 
-      <div class="rowA">
-        <div class="col75">
-          <span ng-repeat="type in pokemon.types">
-            <span  class="type" ng-class=type.name >
-              {{type.name}}
-            </span>
-          </span>                       
-        </div>
-        <div class="col25">        
-          <img src="images/pokeball.png" alt="">&nbsp;
-          <img src="images/star.png" alt="">
-        </div>        
-      </div>      
+El id es: {{pokemon_id}}
+  <a ng-repeat="pokemon in pokemons | orderBy:id:reverse | filter:search" ng-href="#/pokemons/{{pokemon.id}}">  
+    <div class="row pokemon-item">
+      <div class="col-xs-3 pokemon-item-image">
+          <img ng-src="images/{{pokemon.image}}" alt="Pokemon image">
+      </div>          
+      <div class="col-xs-9 pokemon-item-info">
+        <div class="pokemon-item-number">#0{{pokemon.id}}</div>
+        <span class="pokemon-item-name">
+          {{ pokemon.name }}        
+        </span> 
+        <div class="rowA">
+          <div class="col75">
+            <span ng-repeat="type in pokemon.types">
+              <span  class="type" ng-class=type.name >
+                {{type.name}}
+              </span>
+            </span>                       
+          </div>
+          <div class="col25">        
+            <img src="images/pokeball.png" alt="">&nbsp;
+            <img src="images/star.png" alt="">
+          </div>        
+        </div>      
+      </div>
     </div>      
-  </div>      
+  </a>        
 </div>
   

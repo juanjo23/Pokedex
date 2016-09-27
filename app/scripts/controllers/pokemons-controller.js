@@ -1,16 +1,14 @@
 angular.module('pokedexApp')
-.controller('PokemonController', ['$scope', function PokemonController($scope) {
+.controller('PokemonsController', ['$scope', function PokemonController($scope) {
 	
-	$scope.reverse = false;
+	$scope.reverse = 4;
+    $scope.pokemon_id = "Hola";
+	
 	$scope.sort = function(id) {
-		alert("Hola");
 		$scope.reverse = !$scope.reverse;
     };
 
-    $scope.showDesc = function(id){
-    	alert("Seleccionaste a:" + pokemons[id].name);
-    };
-
+	
 	$('#nav-title').text('All Pokémon');
 	var pokemons = [
 		{
