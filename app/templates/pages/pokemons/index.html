@@ -7,8 +7,8 @@
   </div>
 </div>
 
+
 <div class="pokemon-list">
-El id es: {{pokemon_id}}
   <a ng-repeat="pokemon in pokemons | orderBy:id:reverse | filter:search" ng-href="#/pokemons/{{pokemon.id}}">  
     <div class="row pokemon-item">
       <div class="col-xs-3 pokemon-item-image">

@@ -33,6 +33,12 @@
         <button type="button" class="navbar-toggle pull-left" data-toggle="collapse" data-target=".navbar-collapse">
           <span id="menu-icon" class="glyphicon glyphicon-menu-hamburger"></span>
         </button>
+        
+        <button type="button" class="navbar-toggle navbar-go-back pull-left" onclick=window.history.back()>
+          <span id="menu-icon" class="glyphicon glyphicon-menu-left"></span>
+        </button>
+
+        
         <div class="navbar-brand" id="nav-title">
           POKÉDEX 
         </div>
@@ -84,7 +90,11 @@
     <!-- build:js scripts/main.js -->
     <script src="scripts/app.js"></script>
     <script src="scripts/routes.js"></script> 
-    <script src="scripts/controllers/pokemon-controller.js"></script>
+    <!-- build:js scripts/controllers.js -->
+    
+    <!-- endbuild -->
+    <script src="scripts/controllers/pokemons-controller.js"></script>
+    <script src="scripts/controllers/pokemons-show-controller.js"></script>
     <!-- endbuild -->
   </body>
 </html>

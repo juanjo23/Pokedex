@@ -16,16 +16,20 @@ body{
   margin-bottom: 0;
   .navbar-header{
     background-color: $primary-color-pink;
-    .navbar-toggle{
+    .navbar-toggle{      
       color: white;
       display:inline-block;
       font-size: $font-size-base + 8px;
       padding: 0 10px;
       border: none;   
-      &:hover{
+      &:hover, &:focus
+      {
         background: none;
       }   
-    }
+    } 
+    .navbar-go-back{
+      display:none;
+    }   
     .navbar-brand{
       font-weight:bold;
       width: 100%;
@@ -59,7 +63,6 @@ body{
       }
     } 
   }
-
 }
 .description-header{
   background: $primary-color-pink;

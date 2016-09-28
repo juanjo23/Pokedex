@@ -1,3 +1,4 @@
+/*
 var toggle = true;
 var navTitle = '';
 $('.navbar-toggle').click(function(){	
@@ -16,7 +17,7 @@ $('.navbar-toggle').click(function(){
 $('.nav a').click(function(){
 	$('.navbar-toggle').click();
 });
-
+*/
 
 angular.module('pokedexApp', ['ngRoute'])
 .config(['$routeProvider', function($routeProvider){
@@ -25,12 +26,12 @@ angular.module('pokedexApp', ['ngRoute'])
 	  .when('/pokemons', {
         templateUrl:'templates/pages/pokemons/index.html',
         controller: 'PokemonsController',
-        controllerAs: 'pksCtrl'
+        controllerAs: 'pkCtrl'
       })
       .when('/pokemons/:id', {
       	templateUrl:'templates/pages/pokemons/show.html',        
-        controller: 'PokemonsController',
-        controllerAs: 'pksShwCtrl'
+        controller: 'PokemonsShowController',
+        controllerAs: 'pkShowCtrl'
       })
       .when('/caught', {
         templateUrl:'templates/pages/caught/index.html'
