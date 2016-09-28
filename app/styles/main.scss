@@ -27,7 +27,7 @@ body{
         background: none;
       }   
     } 
-    .navbar-go-back{
+    #btn-back{
       display:none;
     }   
     .navbar-brand{
@@ -64,24 +64,8 @@ body{
     } 
   }
 }
-.description-header{
-  background: $primary-color-pink;
-  color:white;
-  font-size: 18px;
-  padding: 10px;
-  font-weight: bold;
-  .go-back{
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    padding: 10px 20px;
-    cursor: pointer;
-    &:hover {
-      background-color: $primary-color-pink-dark;
-    }
-  }
-}
 
+/*
 .description-section{
   .pokemon-image{
     width: 40%;
@@ -108,7 +92,7 @@ body{
     }
   }
 }
-
+*/
 
 .type{
   display: inline-block;
@@ -214,6 +198,9 @@ body{
           width:25%;
           text-align:right;
           float:left;
+          img{
+            width: 23px;
+          }
         }
         &:after{
          content: '';
@@ -226,9 +213,31 @@ body{
 }
 /* end pokemon list */
 
-/** Pokemon list 2**/
-.pokemon-list{
-
+/* Pokemon Description */
+.pokemon-description{
+  .pokemon-image{
+    padding: 10px;
+    img{
+      width:100%;
+      //padding: 3px 10px;
+    } 
+  }
+  .description{
+    color: $primary-color-gray;
+    padding: 5px;
+    .desc-title{
+      font-size: 18px;
+      margin-top: 10px;
+      color: $primary-color-pink;
+      font-weight: bold;
+      position: relative;
+      .icons{
+        position: absolute;
+        top:0;
+        right:10px;
+      }
+    }
+  }
 }
 
 

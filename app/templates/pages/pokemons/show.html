@@ -1,102 +1,115 @@
-<div class="row description-header">
-        <div class="col-md-12 text-center">
-          <div class="go-back">
-            <i class="fa fa-chevron-left" aria-hidden="true"></i>
-          </div>
-          Description Hola
-        </div>
+<div class="row pokemon-description">
+  <div class="col-xs-4 pokemon-image">
+    <img ng-src="images/{{pokemon.image}}" alt="Pokemon image">
+  </div>
+  <div class="col-xs-8 description">
+    <div class="desc-title">
+      #0{{pokemon.id}} {{pokemon.name}}
+      <div class="icons">
+        <img src="images/pokeball.png" width="16">
+        <img src="images/star.png" width="16" >
       </div>
-Aqui se verá la descripción de un pichi pokemon
+    </div>
+    <p>{{pokemon.height}}m, {{pokemon.weight}}kg</p>
+    <p>
+      {{pokemon.description}}
+      Bulbasaur can be seen napping in bright sunlight. There is a seed on its back. By soaking up the sun's rays, the seed grows progressively larger.      
+    </p>
+    <span ng-repeat="type in pokemon.types">
+      <span  class="type" ng-class=type.name >
+        {{type.name}}
+      </span>
+    </span>
+  </div>
+</div>
 
 Seleccionaste el pokemon con el id: {{pokemon_id}}
+<!--
 <hr>
-{{pokemon}}
+<h1>{{pokemon.name}}</h1>
+<img ng-src="images/{{pokemon.image}}">
+<p>{{pokemon.name}} Si otra vez y que?</p>
+{{reverse}} juan
 <hr>
-	<h1>{{pokemon.name}}</h1>
-	<img ng-src="images/{{pokemon.image}}">
-	<p>{{pokemon.name}} Si otra vez y que?</p>
- {{reverse}} juan
+<>
+-->
 
-
-
-      
-
-      <div class="row description-section">
-        <div class="pokemon-image">
-          <img src="images/bulbasaur.png" alt="bulbasaur image" width="130" height="130">
-        </div>
-        <div class="description">
-          <div class="desc-title">
-            #001 Bulbasaur
-            <div class="icons">
-              <img src="images/pokeball.png" width="16">
-              <img src="images/star.png" width="16" >
-            </div>
-          </div>
-          <p>0.7m, 6.9kg</p>
-          <p>
-            Bulbasaur can be seen napping in bright sunlight. There is a seed on its back. By soaking up the sun's rays, the seed grows progressively larger.
-          </p>
-          <span class="tag grass">Grass</span>
-          <span class="tag poison">Poison</span>
-          <span class="tag bug">Bug</span>
-        </div>
-      </div>
-      <div class="row information">
-        <div class="info-title">
-          General Information
-        </div>
-        <div>
-          <table class="table">
-            <tr><td><b>Hidden Abilities</b></td> <td>Clorophyll</td></tr>
-            <tr><td><b>Location</b></td> <td>Lumiose City</td></tr>
-          </table>
-        </div>
-      </div>
-      <div class="row information">
-        <div class="info-title">
-          Evolution
-        </div>
-        <div class="evolution">
-          <div class="evolution-number">#001</div>
-          <div class="evolution-image">
-            <img src="images/bulbasaur.png" alt="bulbasaur image" width="90" height="70">
-          </div>
-          <div class="evolution-info">
-            <div class="evolution-desc">
-              <span class="evolution-name" >Bulbasaur</span>
-              <span class="tag grass">Grass</span>
-              <span class="tag poison">Poison</span>
-              <span class="tag bug">Bug</span>
-            </div>
-          </div>
-        </div>
-        <div class="evolution">
-          <div class="evolution-number">#002</div>
-          <div class="evolution-image">
-            <img src="images/ivysaur.png" alt="Ivysaur image" width="90" height="70">
-          </div>
-          <div class="evolution-info">
-            <div class="evolution-desc">
-              <span class="evolution-name" >Ivysaur <span class="evolution-level">LV.16</span> </span>
-              <span class="tag grass">Grass</span>
-              <span class="tag poison">Poison</span>
-              <span class="tag bug">Bug</span>
-            </div>
-          </div>
-        </div>
-        <div class="evolution">
-          <div class="evolution-number">#003</div>
-          <div class="evolution-image">
-            <img src="images/venusaur.png" alt="bulbasaur image" width="90" height="70">
-          </div>
-          <div class="evolution-info">
-            <div class="evolution-desc">
-              <span class="evolution-name" >Bulbasaur <span class="evolution-level">LV.32</span> </span>
-              <span class="tag grass">Grass</span>
-              <span class="tag poison">Poison</span>
-              <span class="tag bug">Bug</span>
-            </div>
-          </div>
-        </div>
-      </div>
+<div class="row description-section">
+	<div class="pokemon-image">
+		<img src="images/bulbasaur.png" alt="bulbasaur image" width="130" height="130">
+	</div>
+	<div class="description">
+		<div class="desc-title">
+			#001 Bulbasaur
+			<div class="icons">
+				<img src="images/pokeball.png" width="16">
+				<img src="images/star.png" width="16" >
+			</div>
+		</div>
+		<p>0.7m, 6.9kg</p>
+		<p>
+			Bulbasaur can be seen napping in bright sunlight. There is a seed on its back. By soaking up the sun's rays, the seed grows progressively larger.
+		</p>
+		<span class="tag grass">Grass</span>
+		<span class="tag poison">Poison</span>
+		<span class="tag bug">Bug</span>
+	</div>
+</div>
+<div class="row information">
+	<div class="info-title">
+		General Information
+	</div>
+	<div>
+		<table class="table">
+			<tr><td><b>Hidden Abilities</b></td> <td>Clorophyll</td></tr>
+			<tr><td><b>Location</b></td> <td>Lumiose City</td></tr>
+		</table>
+	</div>
+</div>
+<div class="row information">
+	<div class="info-title">
+		Evolution
+	</div>
+	<div class="evolution">
+		<div class="evolution-number">#001</div>
+		<div class="evolution-image">
+			<img src="images/bulbasaur.png" alt="bulbasaur image" width="90" height="70">
+		</div>
+		<div class="evolution-info">
+			<div class="evolution-desc">
+				<span class="evolution-name" >Bulbasaur</span>
+				<span class="tag grass">Grass</span>
+				<span class="tag poison">Poison</span>
+				<span class="tag bug">Bug</span>
+			</div>
+		</div>
+	</div>
+	<div class="evolution">
+		<div class="evolution-number">#002</div>
+		<div class="evolution-image">
+			<img src="images/ivysaur.png" alt="Ivysaur image" width="90" height="70">
+		</div>
+		<div class="evolution-info">
+			<div class="evolution-desc">
+				<span class="evolution-name" >Ivysaur <span class="evolution-level">LV.16</span> </span>
+				<span class="tag grass">Grass</span>
+				<span class="tag poison">Poison</span>
+				<span class="tag bug">Bug</span>
+			</div>
+		</div>
+	</div>
+	<div class="evolution">
+		<div class="evolution-number">#003</div>
+		<div class="evolution-image">
+			<img src="images/venusaur.png" alt="bulbasaur image" width="90" height="70">
+		</div>
+		<div class="evolution-info">
+			<div class="evolution-desc">
+				<span class="evolution-name" >Bulbasaur <span class="evolution-level">LV.32</span> </span>
+				<span class="tag grass">Grass</span>
+				<span class="tag poison">Poison</span>
+				<span class="tag bug">Bug</span>
+			</div>
+		</div>
+	</div>
+</div>

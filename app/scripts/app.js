@@ -1,7 +1,7 @@
-/*
+
 var toggle = true;
 var navTitle = '';
-$('.navbar-toggle').click(function(){	
+$('#btn-menu').click(function(){	
 	if(toggle){
 		$('#menu-icon').addClass('glyphicon-remove');
 		$('#menu-icon').removeClass('glyphicon-menu-hamburger');
@@ -15,9 +15,15 @@ $('.navbar-toggle').click(function(){
 });
 
 $('.nav a').click(function(){
-	$('.navbar-toggle').click();
+	$('#btn-menu').click();
 });
-*/
+
+
+$('#btn-back').click(function(){
+  $(this).hide();
+  $('#btn-menu').show();
+  window.history.back();
+});
 
 angular.module('pokedexApp', ['ngRoute'])
 .config(['$routeProvider', function($routeProvider){

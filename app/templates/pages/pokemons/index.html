@@ -15,7 +15,7 @@
           <img ng-src="images/{{pokemon.image}}" alt="Pokemon image">
       </div>          
       <div class="col-xs-9 pokemon-item-info">
-        <div class="pokemon-item-number">#0{{pokemon.id}}</div>
+        <div class="pokemon-item-number">{{pad0(pokemon.id)}}</div>
         <span class="pokemon-item-name">
           {{ pokemon.name }}        
         </span> 
