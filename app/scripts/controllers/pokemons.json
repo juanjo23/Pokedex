@@ -8,10 +8,15 @@
         "weight": 6.9,
 	    "types": [{ "name": "Grass" }, { "name": "Poison" }],
 	    "abilities": [
-			{ "is_hidden": true, "name": "chlorophyll" },
-			{ "is_hidden": false, "name": "overgrow" }
+			{ "is_hidden": true, "name": "Chlorophyll" },
+			{ "is_hidden": false, "name": "Overgrow" }
 		],
-	    "evolutions": [ { "id": 2, "minLevel": 16 }, { "id": 3, "minLevel": 32 } ]
+		"location_area_encounters": [{"name": "Luminose city"}],
+	    "evolutions": [
+	    	{"id": 1, "name": "Bulbasaur", "image":"001Bulbasaur.png", "minLevel": 0 },	    	
+	    	{"id": 2, "name": "Ivysaur",   "image":"002Ivysaur.png",   "minLevel": 16 },
+	    	{"id": 3, "name": "Venusaur",  "image":"003Venusaur.png",     "minLevel": 32 }
+	    ]
 	},
 	{
 	    "id": 3,
@@ -21,87 +26,201 @@
 	    "height": 1.0,
         "weight": 13.0,
 	    "types": [{ "name": "Grass" }, { "name": "Poison" }],
-	    "evolutions": [
-	    	{ "id": 23, "minLevel": 32 }, { "id": 3, "minLevel": 32 } ]
+	    "abilities": [
+			{ "is_hidden": true, "name": "Chlorophyll" },
+			{ "is_hidden": false, "name": "Overgrow" }
+		],
+		"location_area_encounters": [{"name": "Luminose city"}],
+		"evolutions": [
+	    	{"id": 1, "name": "Bulbasaur", "image":"001Bulbasaur.png", "minLevel": 0 },	    	
+	    	{"id": 2, "name": "Ivysaur",   "image":"002Ivysaur.png",   "minLevel": 16 },
+	    	{"id": 3, "name": "Venusaur",  "image":"003Venusaur.png",     "minLevel": 32 }
+	    ]
 	},
 	{
 	    "id": 4,
 	    "name": "Charmander",
 	    "image": "004Charmander.png",
-	    "types": [
-	        { "name": "Fire" }
+	    "description": "There is a large flower on Charmander's back. The flower is said to take on vivid colors if it gets plenty of nutrition and sunlight. The flower's aroma soothes the emotions of people.",
+        "weight": 0.6,
+	    "height": 1.0,
+	    "types": [{ "name": "Fire" }],
+	    "abilities": [
+			{ "is_hidden": true, "name": "Solar Power" },
+			{ "is_hidden": false, "name": "Blaze" }
+		],
+		"location_area_encounters": [{"name": "Luminose city"}],
+		"evolutions": [
+	    	{"id": 4, "name": "Charmander", "image":"004Charmander.png", "minLevel": 0 },
+	    	{"id": 5, "name": "Charmeleon", "image":"005Charmeleon.png", "minLevel": 16 },	    	
+	    	{"id": 6, "name": "Charizard",  "image":"006Charizard.png",  "minLevel":32 }
 	    ]
 	},
 	{
 	    "id": 7,
 	    "name": "Squirtle",
 	    "image": "007Squirtle.png",
-	    "types": [
-	        { "name": "Water" }
+	    "description": "Squirtle's shell is not merely used for protection. The shell's rounded shape and the grooves on its surface help minimize resistance in water, enabling this Pokémon to swim at high speeds. Vamo a calmarno.",
+	    "height": 0.5,
+        "weight": 9.0,
+	    "types": [{ "name": "Water" }],
+	    "abilities": [
+			{ "is_hidden": true, "name": "Rain Dish" },
+			{ "is_hidden": false, "name": "Torrent" }
+		],
+		"location_area_encounters": [{"name": "Luminose city"}],
+	    "evolutions": [
+	    	{"id": 7, "name": "Squirtle", "image":"007Squirtle.png", "minLevel": 0 },
+	    	{"id": 8, "name": "Wartortle", "image":"008Wartortle.png", "minLevel": 16 },	    	
+	    	{"id": 9, "name": "Blastoise",  "image":"009Blastoise.png",  "minLevel":36 }
 	    ]
 	},
 	{
 	    "id": 10,
 	    "name": "Caterpie",
 	    "image": "010Caterpie.png",
-	    "types": [
-	        { "name": "Bug" }
+	    "description": "Caterpie has a voracious appetite. It can devour leaves bigger than its body right before your eyes. From its antenna, this Pokémon releases a terrifically strong odor.",
+	    "height": 0.3,
+        "weight": 2.9,
+	    "types": [{ "name": "Bug" }],
+	    "abilities": [
+			{ "is_hidden": true, "name": "Run Away" },
+			{ "is_hidden": false, "name": "Shield Dust" }
+		],
+		"location_area_encounters": [{"name": "Luminose city"}],
+	    "evolutions": [
+	    	{"id": 10, "name": "Caterpie", "image":"010Caterpie.png", "minLevel": 0 },
+	    	{"id": 11, "name": "Metapod",  "image":"011Metapod.png", "minLevel": 7 },	    	
+	    	{"id": 12, "name": "Butterfree",  "image":"012Butterfree.png",  "minLevel": 10 }
 	    ]
 	},
 	{
 	    "id": 12,
 	    "name": "Butterfree",
 	    "image": "012Butterfree.png",
-	    "types": [
-	        { "name": "Bug" }, { "name": "Flying" }
+	    "description": "Butterfree has a superior ability to search for delicious honey from flowers. It can even search out, extract, and carry honey from flowers that are blooming over six miles from its nest.",
+	    "height": 1.1,
+        "weight": 32,
+	    "types": [{ "name": "Bug" }, { "name": "Flying"}],
+	    "abilities": [
+			{ "is_hidden": true, "name": "Run Away" },
+			{ "is_hidden": false, "name": "Shield Dust" }
+		],
+		"location_area_encounters": [{"name": "Luminose city"}],
+	    "evolutions": [
+	    	{"id": 10, "name": "Caterpie",   "image":"010Caterpie.png",   "minLevel": 0 },
+	    	{"id": 11, "name": "Metapod",    "image":"011Metapod.png",    "minLevel": 7 },	    	
+	    	{"id": 12, "name": "Butterfree", "image":"012Butterfree.png", "minLevel": 10 }
 	    ]
 	},
 	{
 	    "id": 13,
 	    "name": "Weedle",
 	    "image": "013Weedle.png",
-	    "types": [
-	        { "name": "Bug" }, { "name": "Poison" }
+	    "description": "Weedle has an extremely acute sense of smell. It is capable of distinguishing its favorite kinds of leaves from those it dislikes just by sniffing with its big red proboscis (nose).",
+	    "height": 0.3,
+        "weight": 3.2,
+	    "types": [{ "name": "Bug" }, { "name": "Poison"}],
+	    "abilities": [
+			{ "is_hidden": true, "name": "Run Away" },
+			{ "is_hidden": false, "name": "Shield Dust" }
+		],
+		"location_area_encounters": [{"name": "Luminose city"}],
+	    "evolutions": [
+	    	{"id": 13, "name": "Weedle",   "image":"013Weedle.png",   "minLevel": 0 },
+	    	{"id": 14, "name": "Kakuna",   "image":"014Kakuna.png",   "minLevel": 7 },	    	
+	    	{"id": 15, "name": "Beedrill", "image":"015Beedrill.png", "minLevel": 10 }
 	    ]
 	},
 	{
 	    "id": 16,
 	    "name": "Pidgey",
 	    "image": "016Pidgey.png",
-	    "types": [
-	        { "name": "Normal" }, { "name": "Flying" }
+	    "description": "Pidgey has an extremely sharp sense of direction. It is capable of unerringly returning home to its nest, however far it may be removed from its familiar surroundings.",
+	    "height": 0.3,
+        "weight": 1.8,
+	    "types": [{ "name": "Normal" }, { "name": "Flying"}],
+	    "abilities": [
+			{ "is_hidden": true, "name": "Big Pecks" },
+			{ "is_hidden": false, "name": "Keen Eye or Tangled Feet" }
+		],
+		"location_area_encounters": [{"name": "Luminose city"}],
+	    "evolutions": [
+	    	{"id": 16, "name": "Pidgey",    "image":"016Pidgey.png",    "minLevel": 0 },
+	    	{"id": 17, "name": "Pidgeotto", "image":"017Pidgeotto.png", "minLevel": 18 },	    	
+	    	{"id": 18, "name": "Pidgeot",   "image":"018Pidgeot.png",   "minLevel": 36 }
 	    ]
 	},
 	{
 	    "id": 19,
 	    "name": "Rattata",
 	    "image": "019Rattata.png",
-	    "types": [
-	        { "name": "Dark" }, { "name": "Normal" }
+	    "description": "Rattata is cautious in the extreme. Even while it is asleep, it constantly listens by moving its ears around. It is not picky about where it lives—it will make its nest anywhere.",
+	    "height": 0.3,
+        "weight": 3.5,
+	    "types": [{ "name": "Dark" }, { "name": "Normal"}],
+	    "abilities": [
+			{ "is_hidden": true, "name": "Gluttony or Hustle" },
+			{ "is_hidden": false, "name": "Run Away or Guts" }
+		],
+		"location_area_encounters": [{"name": "Luminose city"}],
+	    "evolutions": [
+	    	{"id": 19, "name": "Rattata",  "image":"019Rattata.png",   "minLevel": 0 },
+	    	{"id": 20, "name": "Raticate", "image":"020Raticate.png", "minLevel": 20 }	    	
 	    ]
 	},
 	{
 	    "id": 21,
 	    "name": "Spearow",
 	    "image": "021Spearow.png",
-	    "types": [
-	        { "name": "Normal" }, { "name": "Flying" }
+	    "description": "Spearow has a very loud cry that can be heard over half a mile away. If its high, keening cry is heard echoing all around, it is a sign that they are warning each other of danger.",
+	    "height": 0.3,
+        "weight": 2.0,
+	    "types": [{ "name": "Normal" }, { "name": "Flying"}],
+	    "abilities": [
+			{ "is_hidden": true, "name": "Sniper" },
+			{ "is_hidden": false, "name": "Keen Eye" }
+		],
+		"location_area_encounters": [{"name": "Luminose city"}],
+	    "evolutions": [
+	    	{"id": 21, "name": "Spearow", "image":"021Spearow.png", "minLevel": 0 },
+	    	{"id": 22, "name": "Fearow",  "image":"022Fearow.png",  "minLevel": 20 }	    	
 	    ]
 	},
 	{
 	    "id": 23,
 	    "name": "Ekans",
 	    "image": "023Ekans.png",
-	    "types": [
-	        { "name": "Poison" }
+	    "description": "Ekans curls itself up in a spiral while it rests. Assuming this position allows it to quickly respond to a threat from any direction with a glare from its upraised head.",
+	    "height": 2.0,
+        "weight": 6.9,
+	    "types": [{ "name": "Poison" }],
+	    "abilities": [
+			{ "is_hidden": true, "name": "Unnerve" },
+			{ "is_hidden": false, "name": "Intimidate or Shed Skin" }
+		],
+		"location_area_encounters": [{"name": "Luminose city"}],
+	    "evolutions": [
+	    	{"id": 23, "name": "Ekans", "image":"023Ekans.png", "minLevel": 0 },
+	    	{"id": 24, "name": "Arbok",  "image":"024Arbok.png",  "minLevel": 22 }	    	
 	    ]
 	},
 	{
 	    "id": 25,
 	    "name": "Pikachu",
 	    "image": "025Pikachu.png",
-	    "types": [
-	        { "name": "Electric" }
+	    "description": "Whenever Pikachu comes across something new, it blasts it with a jolt of electricity. If you come across a blackened berry, it's evidence that this Pokémon mistook the intensity of its charge.",
+	    "height": 0.4,
+        "weight": 6.0,
+	    "types": [{ "name": "Electric" }],
+	    "abilities": [
+			{ "is_hidden": true,  "name": "Lightning Rod" },
+			{ "is_hidden": false, "name": "Static" }
+		],
+		"location_area_encounters": [{"name": "Luminose city"}],
+	    "evolutions": [
+	    	{"id": 25, "name": "Pikachu", "image":"025Pikachu.png", "minLevel": 0 },
+	    	{"id": 26, "name": "Raichu",  "image":"026Raichu.png",  "minLevel": 0 }	    	
 	    ]
 	},
 	{
@@ -198,6 +317,71 @@
 	    "image": "052Meowth.png",
 	    "types": [
 	        { "name": "Normal" }, { "name": "Dark" }
+	    ]
+	},
+	{
+	    "id": 83,
+	    "name": "Farfetch'd",
+	    "image": "083Farfetchd.png",
+	    "description": "Farfetch'd is always seen with a stalk from a plant of some sort. Apparently, there are good stalks and bad stalks. This Pokémon has been known to fight with others over stalks.",
+	    "height": 0.8,
+        "weight": 15,
+	    "types": [{ "name": "Normal" }, { "name": "Flying"}],
+	    "abilities": [
+			{ "is_hidden": true, "name": "Defiant" },
+			{ "is_hidden": false, "name": "Keen Eye or Inner Focus" }
+		],
+		"location_area_encounters": [{"name": "Luminose city"}],
+	    "evolutions": []
+	},
+	{
+	    "id": 115,
+	    "name": "Kangaskhan",
+	    "image": "115Kangaskhan.png",
+	    "description": "If you come across a young Kangaskhan playing by itself, you must never disturb it or attempt to catch it. The baby Pokémon's parent is sure to be in the area, and it will become violently enraged at you.",
+	    "height": 2.2,
+        "weight": 90,
+	    "types": [{ "name": "Normal" }],
+	    "abilities": [
+			{ "is_hidden": true, "name": "Inner Focus" },
+			{ "is_hidden": false, "name": "Early Bird or Scrappy" }
+		],
+		"location_area_encounters": [{"name": "Luminose city"}],
+	    "evolutions": []
+	},
+	{
+	    "id": 131,
+	    "name": "Lapras",
+	    "image": "131Lapras.png",
+	    "description": "People have driven Lapras almost to the point of extinction. In the evenings, this Pokémon is said to sing plaintively as it seeks what few others of its kind still remain.",
+	    "height": 2.5,
+        "weight": 220,
+	    "types": [{ "name": "Water" }, { "name": "Ice" }],
+	    "abilities": [
+			{ "is_hidden": true, "name": "Hydration" },
+			{ "is_hidden": false, "name": "Water Absorb or Shell Armor" }
+		],
+		"location_area_encounters": [{"name": "Saffron City"}, {"name": "Fall City"}],
+	    "evolutions": []
+	},
+	{
+	    "id": 133,
+	    "name": "Eevee",
+	    "image": "133Eevee.png",
+	    "description": "Eevee has an unstable genetic makeup that suddenly mutates due to the environment in which it lives. Radiation from various stones causes this Pokémon to evolve.",
+	    "height": 2.5,
+        "weight": 220,
+	    "types": [{ "name": "Normal" }],
+	    "abilities": [
+			{ "is_hidden": true, "name": "Anticipation" },
+			{ "is_hidden": false, "name": "Run Away or Adaptability" }
+		],
+		"location_area_encounters": [{"name": "Luminose City"}],
+	    "evolutions": [
+	    	{"id": 133, "name": "Eevee",   "image":"133Eevee.png",    "minLevel": 0, "type":"Normal" },	    	
+	    	{"id": 134, "name": "Vaporeon","image":"134Vaporeon.png", "minLevel": 0, "type":"Water" },
+	    	{"id": 135, "name": "Jolteon", "image":"135Jolteon.png",  "minLevel": 0, "type":"Electric" },
+	    	{"id": 136, "name": "Flareon", "image":"136Flareon.png",  "minLevel": 0, "type":"Fire" }
 	    ]
 	}
 ]

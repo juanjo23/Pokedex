@@ -15,11 +15,14 @@ angular.module('pokedexApp')
     	return pokemon.id == id;
 	};
 
+	$scope.pad0 = function(num){
+    	var res = (num < 10) ? "00" : ((num < 100) ? "0":"");  	
+    	return "#"+ res + num;
+    }
+
 	$http.get('scripts/controllers/pokemons.json').success(function(data) {
    		var pokemons = data;
-
    		for(var i=0; i < pokemons.length; i++){
-   			console.log(pokemons[i].id +" - "+$scope.pokemon_id);
    			if(pokemons[i].id == $scope.pokemon_id){
    				$scope.pokemon = pokemons[i]; 
    			}

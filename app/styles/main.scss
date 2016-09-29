@@ -8,6 +8,10 @@ $icon-font-path: '../fonts/';
 
 body{
   font-family: 'Helvetica', sans-serif;
+  color: #363636;
+  a{
+    color: #363636;
+  }
 }
 
 
@@ -64,35 +68,6 @@ body{
     } 
   }
 }
-
-/*
-.description-section{
-  .pokemon-image{
-    width: 40%;
-    float: left;
-    text-align: center;
-    margin-top: 20px;
-  }
-  .description{
-    width: 60%;
-    float:left;
-    color: $primary-color-gray;
-    padding: 5px;
-    .desc-title{
-      font-size: 18px;
-      margin-top: 10px;
-      color: $primary-color-pink;
-      font-weight: bold;
-      position: relative;
-      .icons{
-        position: absolute;
-        top:0;
-        right:10px;
-      }
-    }
-  }
-}
-*/
 
 .type{
   display: inline-block;
@@ -159,7 +134,7 @@ body{
       padding: 10px;
       img{
         width:100%;
-        border: 1px solid #999999;
+        border: 1px solid $color-light-gray;
         padding: 3px 10px;
       }
     }    
@@ -169,7 +144,7 @@ body{
         position: absolute;
         top: 10px;
         right: 15px;
-        font-size: 12px;
+        font-size: $font-size-base - 2;
         color: $primary-color-gray;
       }
       .pokemon-item-name{
@@ -177,16 +152,14 @@ body{
         font-size: 16px;        
         font-weight:bold;
         margin-bottom: 5px;
-        margin-top:5px;
-        /*
-        .pokemon-item-level2{
+        margin-top:5px;  
+        .pokemon-item-level{
           font-weight: normal;
           color: $primary-color-gray;
           font-size: $font-size-base - 2px;
           position: absolute;
-          left: 90px;
-        }
-        */
+          left: 105px;
+        }     
       }
       .rowA{
         margin:7px 0;
@@ -243,10 +216,10 @@ body{
 
 .information{
   .info-title{
-    background: $primary-color-gray;
+    background-color: $color-light-gray;
     color:white;
     font-size: 18px;
-    padding: 10px;
+    padding: 8px 30px;
     font-weight: bold;
   }
   .table{
@@ -257,67 +230,10 @@ body{
       padding-left: 20px !important;
     }
   }
-  .evolution{
-    border-bottom: 1px solid $color-light-gray;
-    position: relative;
-    &:after{
-      content: '';
-      display: block;
-      clear: both;
-    }
-    .evolution-number{
-      position: absolute;
-      top: 10px;
-      right: 15px;
-      font-size: 12px;
-      color: $primary-color-gray;
-    }
-    .evolution-image{
-      width: 30%;
-      float: left;
-      text-align: center;
-      img{
-        border: 1px solid #999999;
-        padding: 3px 10px;
-        margin: 10px;
-      }
-    }
-    .evolution-info{
-      float:left;
-      .evolution-desc{
-        padding:10px;
-        .evolution-name{
-          font-size: 16px;
-          display: block;
-          font-weight: bold;
-          margin-bottom: 5px;
-          margin-top:5px;
-          position: relative;
-          .evolution-level{
-            font-weight: normal;
-            color: $primary-color-gray;
-            font-size: $font-size-base - 2px;
-            position: absolute;
-            left: 90px;
-          }
-        }
-      }
-    }
-  }
 }
-
-
-::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-    color:    red;
-  opacity:  1;
-}
-:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-   color:    red;
-}
-::-moz-placeholder { /* Mozilla Firefox 19+ */
-   color:    red;
-   opacity:  1;
-}
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-   color:    red;
+.no-evolutionary{
+  padding: 20px 0;
+  color: $primary-color-gray;
+  font-size: $font-size-base;
+  text-align: center; 
 }
