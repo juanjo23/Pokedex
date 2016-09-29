@@ -10,5 +10,6 @@ Nope, voy a utilizar controladores diferentes, pero por mientras voy a tener que
 
 https://scotch.io/tutorials/build-a-restful-api-using-node-and-express-4
 
+Comenzando el sprint2...
 
-Juan: Lista con los 151 pokemos te suena????????????
+
