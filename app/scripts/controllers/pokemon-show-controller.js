@@ -1,5 +1,5 @@
 angular.module('pokedexApp')
-.controller('PokemonsShowController', ['$scope', '$http', '$routeParams', function PokemonsShowController($scope, $http, $routeParams) {
+.controller('PokemonShowController', ['$scope', '$http', '$routeParams', 'Pokemon', function PokemonShowController($scope, $http, $routeParams, Pokemon) {
 	var controller = this;
 	$scope.pokemon_id = $routeParams.id;
 
@@ -16,18 +16,18 @@ angular.module('pokedexApp')
 	};
 
 	$scope.pad0 = function(num){
-    	var res = (num < 10) ? "00" : ((num < 100) ? "0":"");  	
-    	return "#"+ res + num;
+    	var res = (num < 10) ? '00' : ((num < 100) ? '0':'');  	
+    	return '#'+ res + num;
     }
 
-	$http.get('scripts/controllers/pokemons.json').success(function(data) {
+  	Pokemon.all().success(function(data){
    		var pokemons = data;
    		for(var i=0; i < pokemons.length; i++){
    			if(pokemons[i].id == $scope.pokemon_id){
    				$scope.pokemon = pokemons[i]; 
    			}
    		}
-	});
+  	});
 
 /*
 	$scope.pokemon = {

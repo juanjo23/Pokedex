@@ -1,0 +1,20 @@
+<div class="row pokemon-item">
+  <div class="col-xs-3 pokemon-item-image">
+    <img ng-src="images/{{evolution.image}}" alt="{{evolution.name}} image">
+  </div>
+  <div class="col-xs-9 pokemon-item-info">
+    <div class="pokemon-item-number">{{pad0(evolution.id)}}</div>
+    <span class="pokemon-item-name">
+      {{ evolution.name }}
+      <span class="pokemon-item-level" ng-show="evolution.minLevel">LV. {{evolution.minLevel}}</span>
+    </span> <br>
+    <span ng-repeat="type in types" ng-if="!evolution.type">
+      <span  class="type" ng-class=type.name >
+        {{type.name}}
+      </span>
+    </span>
+    <span  class="type" ng-class="evolution.type" ng-if="evolution.type">
+      {{evolution.type}}
+    </span>
+  </span>
+</div>

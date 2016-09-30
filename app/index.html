@@ -17,27 +17,20 @@
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
-    <style>     
-      .pokedex-title{
-        
-
-      }
-    </style>
   </head>
   <body>
     <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->    
+    
     <nav class="navbar navbar-default custom-navbar" role="navigation">
       <div class="navbar-header">
         <button type="button" id="btn-menu" class="navbar-toggle pull-left" data-toggle="collapse" data-target=".navbar-collapse">
           <span id="menu-icon" class="glyphicon glyphicon-menu-hamburger"></span>
-        </button>
-        
+        </button>  
         <button type="button" id="btn-back" class="navbar-toggle pull-left">
           <span id="menu-icon" class="glyphicon glyphicon-menu-left"></span>
         </button>
-        
         <div class="navbar-brand" id="nav-title">
           POKÉDEX 
         </div>
@@ -45,7 +38,7 @@
       <div class="navbar-collapse collapse" >
         <ul class="nav navbar-nav ">
             <li>
-              <a href="#/pokemons">ALL POKEMON</a>
+              <a href="#/pokemon">ALL POKEMON</a>
             </li>
             <li>
               <a href="#/caught">CAUGHT A POKEMON</a>
@@ -56,7 +49,6 @@
         </ul><!-- /.nav-collapse -->
       </div><!-- /.container -->
     </nav><!-- /.navbar -->
-
 
     <div class="container-fluid">
       <div ng-view>
@@ -89,11 +81,21 @@
     <!-- build:js scripts/main.js -->
     <script src="scripts/app.js"></script>
     <script src="scripts/routes.js"></script> 
-    <!-- build:js scripts/controllers.js -->
-    
     <!-- endbuild -->
-    <script src="scripts/controllers/pokemons-controller.js"></script>
-    <script src="scripts/controllers/pokemons-show-controller.js"></script>
+
+    <!-- build:js scripts/directives.js -->
+    <script src="scripts/directives/pokemon-item.js" ></script>
+    <script src="scripts/directives/pokemon-evolution.js" ></script>
+    <!-- endbuild -->
+
+    <!-- build:js scripts/services.js -->
+    <script src="scripts/services/pokemon.js" ></script>
+    <!-- endbuild -->
+
+    
+    <!-- build:js scripts/controllers.js -->
+    <script src="scripts/controllers/pokemon-controller.js"></script>
+    <script src="scripts/controllers/pokemon-show-controller.js"></script>
     <!-- endbuild -->
   </body>
 </html>

@@ -1,20 +1,21 @@
-/*
-angular.module('pokedexApp')
-.config(function($routeProvider){
-	$routeProvider
-	  .when('/all', {
-        templateUrl:'templates/pages/all/index.html',
-        controller: 'PokemonController',
-        controllerAs: 'pkController'
+angular.module('pokedexApp', ['ngRoute'])
+.config(['$routeProvider', function($routeProvider){
+  $routeProvider
+    .when('/pokemon', {
+        templateUrl:'templates/pages/pokemon/index.html',
+        controller: 'PokemonController'
+      })
+      .when('/pokemon/:id', {
+        templateUrl:'templates/pages/pokemon/show.html',        
+        controller: 'PokemonShowController'
       })
       .when('/caught', {
         templateUrl:'templates/pages/caught/index.html'
       })
       .when('/battle-box', {
-      	templateUrl:'templates/pages/battle-box/index.html'
+        templateUrl:'templates/pages/battle-box/index.html'
       })
       .otherwise({
-        redirectTo: '/all'
+        redirectTo: '/'
       });
-});
-*/
+}]);
