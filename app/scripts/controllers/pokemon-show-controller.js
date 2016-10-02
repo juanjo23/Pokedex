@@ -20,15 +20,10 @@ angular.module('pokedexApp')
     	return '#'+ res + num;
     }
 
-  	Pokemon.all().success(function(data){
-   		var pokemons = data;
-   		for(var i=0; i < pokemons.length; i++){
-   			if(pokemons[i].id == $scope.pokemon_id){
-   				$scope.pokemon = pokemons[i]; 
-   			}
-   		}
-  	});
-
+  Pokemon.find($scope.pokemon_id).success(function(data){
+		$scope.pokemon = data;
+  });
+  
 /*
 	$scope.pokemon = {
 		    'id': 4,

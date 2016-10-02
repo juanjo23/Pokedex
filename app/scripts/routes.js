@@ -16,6 +16,6 @@ angular.module('pokedexApp', ['ngRoute'])
         templateUrl:'templates/pages/battle-box/index.html'
       })
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/pokemon'
       });
 }]);

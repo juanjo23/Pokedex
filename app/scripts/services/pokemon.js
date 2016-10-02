@@ -1,22 +1,14 @@
-/* Es necsario modificar esta parte para que llame a un restful api */
+/* Rememba to quit localhost:8080 */
 angular.module('pokedexApp')
 .factory('Pokemon', ['$http', function PokemonFactory($http){
 	return{
-		all: function() {
-      return $http({method: 'GET', url: "/data/pokemon.json"});
-    },
-
-    find: function(id){
-      //return $http({method:'GET', url: '/notes/' + id});
-      $http({method: 'GET', url: "/data/pokemon.json"}).success(function(data){
-	      var pokemons = data;
-	      for(var i=0; i < pokemons.length; i++){
-	      	if(pokemons[i].id == id){
-	      		return pokemons[i];
-	      	}
-	      }
-      });
-    }
-
-	}
+		all: function(){
+			//return $http({method: 'GET', url:'https://private-e669b67-pokemon3.apiary-mock.com/pokemon'});
+			return $http({method: 'GET', url:'/api/pokemon'});
+		},
+		find: function(id){
+      //return $http({method: 'GET', url:'https://private-e669b67-pokemon3.apiary-mock.com/pokemon/' + id});
+      return $http({method: 'GET', url:'/api/pokemon/' + id});
+    } 
+	};
 }]);

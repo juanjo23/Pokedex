@@ -9,7 +9,7 @@ angular.module('pokedexApp')
     },
     templateUrl: 'templates/directives/pokemon-evolution.html',
     link: function(scope, element) {
-      console.log("Loading directive");
+      console.log('Loading directive');
     }
   };
 });
