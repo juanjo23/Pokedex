@@ -77,6 +77,7 @@ body{
   font-size: 12px;
   border-radius: 4px;
   padding-top: 1px;
+  margin-right: 2px;
 
   &.Grass   { background-color: $color-grass;    }
   &.Poison  { background-color: $color-poison;   }
@@ -171,9 +172,17 @@ body{
           width:25%;
           text-align:right;
           float:left;
-          img{
+          .btn-icon{
+            display: inline-block;
             width: 23px;
+            height: 23px;        
+            background-size: 23px;
+            vertical-align: middle;
           }
+          .pokeball     { background-image: url('../images/pokeball.png'); }
+          .pokeball-pink{ background-image: url('../images/pokeball-pink.png'); }
+          .battle       { background-image: url('../images/star.png'); }
+          .battle-gold  { background-image: url('../images/star-gold.png'); }
         }
         &:after{
          content: '';

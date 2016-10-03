@@ -10,7 +10,8 @@ angular.module('pokedexApp', ['ngRoute'])
         controller: 'PokemonShowController'
       })
       .when('/caught', {
-        templateUrl:'templates/pages/caught/index.html'
+        templateUrl:'templates/pages/caught/index.html',
+        controller: 'CaughtController'
       })
       .when('/battle-box', {
         templateUrl:'templates/pages/battle-box/index.html'

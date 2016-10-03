@@ -8,8 +8,9 @@
 </div>
 
 <div class="pokemon-list">
-  <a ng-repeat="pokemon in pokemons | orderBy:id:reverse | filter:search" ng-href="#/pokemon/{{pokemon.id}}">
-    <pokemon-item pokemon="pokemon"></pokemon-item>
-  </a>        
+  <a ng-repeat="pokemon in pokemons  | orderBy:id:reverse | filter:search" ng-href="#/pokemon/{{pokemon.id}}" >
+    <pokemon-item pokemon="pokemon" caught="caught"></pokemon-item>
+  </a>
+
 </div>
   
