@@ -18,12 +18,13 @@ angular.module('pokedexApp')
         if(scope.pokemon.caught == 1){
           scope.pokemon.caught = 0;
           localStorage[scope.pokemon.name] = 0;
+          scope.uncaught = true;
         }else{
           scope.pokemon.caught = 1;
           localStorage[scope.pokemon.name] = 1;
         }
-      
       };
+      
 
       scope.pad0 = function (num) {
         var res = num < 10 ? '00' : num < 100 ? '0' : '';

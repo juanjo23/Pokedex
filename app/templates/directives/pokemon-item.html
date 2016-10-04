@@ -21,5 +21,12 @@
       </div>        
     </div>      
   </div>
+  <div class="col-xs-12 overlay" ng-show="uncaught" ng-click="$event.preventDefault();">
+    <button class="btn delete">
+      <span class="glyphicon glyphicon-trash"></span> <br> Remove
+    </button>
+    <button class="btn undo" ng-click="uncaught=false">
+      <span class="glyphicon glyphicon-remove"></span> <br> Undo
+    </button>
+  </div>
 </div>
-

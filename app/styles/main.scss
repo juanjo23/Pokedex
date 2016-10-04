@@ -130,6 +130,7 @@ body{
 /** Pokemon list **/
 .pokemon-list{
   .pokemon-item{
+    position: relative;
     border-bottom: 1px solid $color-light-gray;
     .pokemon-item-image{
       padding: 10px;
@@ -188,6 +189,33 @@ body{
          content: '';
           display: block;
           clear: both;
+        }
+      }
+    }
+    .overlay{
+      background-color: rgba(211, 211, 211, 0.7);
+      position: absolute;
+      bottom:0;
+      top:0;
+      text-align:right;
+      .btn{
+        position: absolute;
+        top:0px;
+        bottom:0px;
+        width:25%;
+        border-radius: 0;
+        color: white;
+        &.delete{
+          right:0;
+          background-color: $primary-color-pink;
+        }
+        &.undo{
+          background-color: $primary-color-pink;
+          background-color: $primary-color-gray;
+          right:25%;
+        }
+        .glyphicon{
+          font-size: $font-size-base + 4;
         }
       }
     }    
