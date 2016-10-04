@@ -1,4 +1,4 @@
-/* Rememba to quit localhost:8080 */
+/* Utiliza apiary sólo en desarrollo */
 angular.module('pokedexApp')
 .factory('Pokemon', ['$http', function PokemonFactory($http){
   return{

@@ -17,16 +17,18 @@
       </div>
       <div class="col25"> 
         <span class="btn-icon pokeball" ng-class="{'pokeball-pink' : pokemon.caught}" ng-click="caughtPokemon($event);"></span>&nbsp;
-        <span class="btn-icon battle"></span>
+        <span class="btn-icon battle" ng-class="{'battle-gold' : pokemon.battle}" ng-click="battlePokemon($event);"></span>
       </div>        
     </div>      
   </div>
   <div class="col-xs-12 overlay" ng-show="uncaught" ng-click="$event.preventDefault();">
-    <button class="btn delete">
+    <button class="btn delete" ng-click="removePokemon($event)">
       <span class="glyphicon glyphicon-trash"></span> <br> Remove
     </button>
     <button class="btn undo" ng-click="uncaught=false">
       <span class="glyphicon glyphicon-remove"></span> <br> Undo
     </button>
   </div>
+  <div class="message" ng-show="battle">You haven’t captured this Pokémon yet</div>
+  <!-- <div class="col-xs-12 overlay" ng-show="battle" ng-click="$event.preventDefault();"></div>  -->
 </div>

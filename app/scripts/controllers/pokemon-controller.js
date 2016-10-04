@@ -9,7 +9,6 @@ angular.module('pokedexApp')
     $scope.reverse = !$scope.reverse;
   };
 
-
   $('#nav-title').text('All Pokémon');
 
   Pokemon.all().success(function(data){

@@ -8,8 +8,9 @@ angular.module('pokedexApp')
     $scope.reverse = !$scope.reverse;
   };
 
-
   $('#nav-title').text('Caught Pokémon');
+
+  $scope.ctrl_name = 'caughtController';
 
   Pokemon.all().success(function(data){
     $scope.pokemons = data;
