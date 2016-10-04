@@ -14,7 +14,8 @@ angular.module('pokedexApp', ['ngRoute'])
         controller: 'CaughtController'
       })
       .when('/battle-box', {
-        templateUrl:'templates/pages/battle-box/index.html'
+        templateUrl:'templates/pages/battle-box/index.html',
+        controller: 'BattleBoxController'
       })
       .otherwise({
         redirectTo: '/pokemon'

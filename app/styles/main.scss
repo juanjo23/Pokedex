@@ -218,15 +218,14 @@ body{
         }
       }
     }
-    .message{
+    .alert-toast{
       width: 70%;
-      text-align: center;
       position: absolute;
-      margin-left: auto;
-      margin-right: auto;
-      bottom:7px; left:0; right: 0;
-      background-color: rgba(51, 51, 51, 0.7);;
+      text-align: center;
       padding: 5px 7px;
+      margin: 0 auto;
+      bottom:7px; left:0; right: 0;
+      background-color: rgba(51, 51, 51, 0.9);;
       color: $color-light-gray;
     } 
   }

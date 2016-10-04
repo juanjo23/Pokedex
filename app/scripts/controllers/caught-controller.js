@@ -23,6 +23,4 @@ angular.module('pokedexApp')
     }
   });
 
-  
-
 }]);

@@ -1,1 +1,15 @@
-Haz que se peleen unos pokemon
+<div class="row search-bar">
+  <div class="search">
+    <input type="text" ng-model="search.name" placeholder="Search..." name="">
+  </div>
+  <div class="sort" ng-click="sort()">
+    <img ng-src="{{reverse ? 'images/filterImgReverse.png' : 'images/filterImg.png'}}" alt="">
+  </div>
+</div>
+
+<div class="pokemon-list">
+  <a ng-repeat="pokemon in battle_pokemon | orderBy:id:reverse | filter:search" ng-href="#/pokemon/{{pokemon.id}}">
+    <pokemon-item pokemon="pokemon"></pokemon-item>
+  </a>
+</div>
+  
