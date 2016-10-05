@@ -4,7 +4,8 @@
   "dependencies": {
     "bootstrap-sass": "~3.3.5",
     "angular": "^1.5.8",
-    "angular-route": "^1.5.8"
+    "angular-route": "^1.5.8",
+    "angular-mocks": "^1.5.8"
   },
   "overrides": {
     "bootstrap-sass": {
@@ -14,9 +15,5 @@
         "assets/javascripts/bootstrap.js"
       ]
     }
-  },
-  "devDependencies": {
-    "chai": "^3.5.0",
-    "mocha": "^3.0.2"
   }
 }

@@ -1,11 +1,10 @@
 angular.module('pokedexApp')
 .controller('PokemonController', ['$scope', 'Pokemon', function PokemonController($scope, Pokemon) {
-	
   //Variables
   $scope.reverse = false;
   //$scope.caught = "pokeball-pink";
 
-  $scope.sort = function(id) {
+  $scope.sort = function() {
     $scope.reverse = !$scope.reverse;
   };
 
@@ -14,5 +13,6 @@ angular.module('pokedexApp')
   Pokemon.all().success(function(data){
     $scope.pokemons = data;
   });
+
 
 }]);

@@ -34,6 +34,6 @@ app.get('/api/pokemon/:id', function(req, res){
 app.use(express.static(rootPath + 'dist'));
 
 app.listen(port);
-logger.info('\nMagic happens on: {cyan:%s}', 'http://localhost:' + port + '/');
+logger.info('\nOpen your browser in: {cyan:%s}', 'http://localhost:' + port + '/');
 
 logger.info('\nSee the API in: {magenta:%s}', 'http://localhost:' + port + '/api/pokemon/');

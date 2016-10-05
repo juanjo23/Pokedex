@@ -47,15 +47,16 @@ gulp.task('lint', () => {
   })
     .pipe(gulp.dest('app/scripts'));
 });
-gulp.task('lint:test', () => {
-  return lint('test/spec/**/*.js', {
-    fix: true,
-    env: {
-      mocha: true
-    }
-  })
-    .pipe(gulp.dest('test/spec/**/*.js'));
-});
+
+//gulp.task('lint:test', () => {
+//  return lint('test/spec/**/*.js', {
+//    fix: true,
+//    env: {
+//      mocha: true
+//    }
+//  })
+//    .pipe(gulp.dest('test/spec/**/*.js'));
+//});
 
 gulp.task('html', ['styles', 'scripts'], () => {
   return gulp.src('app/**/*.html')
@@ -130,24 +131,24 @@ gulp.task('serve:dist', () => {
   });
 });
 
-gulp.task('serve:test', ['scripts'], () => {
-  browserSync({
-    notify: false,
-    port: 9000,
-    ui: false,
-    server: {
-      baseDir: 'test',
-      routes: {
-        '/scripts': '.tmp/scripts',
-        '/bower_components': 'bower_components'
-      }
-    }
-  });
+//gulp.task('serve:test', ['scripts'], () => {
+//  browserSync({
+//    notify: false,
+//    port: 9000,
+//    ui: false,
+//    server: {
+//      baseDir: 'test',
+//      routes: {
+//        '/scripts': '.tmp/scripts',
+//        '/bower_components': 'bower_components'
+//      }
+//    }
+//  });
 
-  gulp.watch('app/scripts/**/*.js', ['scripts']);
-  gulp.watch('test/spec/**/*.js').on('change', reload);
-  gulp.watch('test/spec/**/*.js', ['lint:test']);
-});
+//  gulp.watch('app/scripts/**/*.js', ['scripts']);
+//  gulp.watch('test/spec/**/*.js').on('change', reload);
+//  gulp.watch('test/spec/**/*.js', ['lint:test']);
+//});
 
 // inject bower components
 gulp.task('wiredep', () => {
@@ -170,4 +171,14 @@ gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
 
 gulp.task('default', ['clean'], () => {
   gulp.start('build');
+});
+
+
+/** Test with karma and jasmine **/
+var Server = require('karma').Server;
+
+gulp.task('unit-tests', function (done) {
+  return new Server({
+    configFile: __dirname + '/karma.conf.js'
+    }, done).start();
 });
