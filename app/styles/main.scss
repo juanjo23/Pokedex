@@ -213,6 +213,9 @@ body{
           background-color: $primary-color-gray;
           right:25%;
         }
+        &.gold{
+          background-color: $color-gold;
+        }
         .glyphicon{
           font-size: $font-size-base + 4;
         }

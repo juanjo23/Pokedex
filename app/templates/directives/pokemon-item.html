@@ -21,14 +21,25 @@
       </div>        
     </div>      
   </div>
-  <div class="col-xs-12 overlay" ng-show="uncaught" ng-click="$event.preventDefault();">
-    <button class="btn delete" ng-click="removePokemon($event)">
+  
+  <div class="col-xs-12 overlay" ng-show="confirm_remove_caught" ng-click="$event.preventDefault();">
+    <button class="btn delete" ng-click="removeCaughtPokemon($event)">
       <span class="glyphicon glyphicon-trash"></span> <br> Remove
     </button>
-    <button class="btn undo" ng-click="uncaught=false">
+    <button class="btn undo" ng-click="confirm_remove_caught=false">
       <span class="glyphicon glyphicon-remove"></span> <br> Undo
     </button>
   </div>
-  <div class="alert-toast" ng-show="battle_alert">You haven’t captured this Pokémon yet</div>
+  
+  <div class="col-xs-12 overlay" ng-show="confirm_remove_battle" ng-click="$event.preventDefault();">
+    <button class="btn delete gold" ng-click="removeBattlePokemon($event)">
+      <span class="glyphicon glyphicon-trash"></span> <br> Remove
+    </button>
+    <button class="btn undo" ng-click="confirm_remove_battle=false">
+      <span class="glyphicon glyphicon-remove"></span> <br> Undo
+    </button>
+  </div>
+
+  <div class="alert-toast" ng-show="alert">{{ alert_message }}</div>
   <!-- <div class="col-xs-12 overlay" ng-show="battle" ng-click="$event.preventDefault();"></div>  -->
 </div>
