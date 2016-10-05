@@ -35,7 +35,7 @@ karma start
 
 - [x] Use Angular.js as JavaScript Client MV*
 - [ ] Use Less  preprocessor to create the CSS 
-      - [x] (Sass used instead)
+      - [x] Sass used instead
 - [x] Use Yeoman to create the application scaffold
 - [x] Use Gulp as JavaScript task runner
 - [x] Use Bower for dependency management
