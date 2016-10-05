@@ -16,7 +16,7 @@ gulp
 
 ```
 npm start
-   OR
+ OR
 node server.js
 ```
 
@@ -26,7 +26,7 @@ node server.js
 
 ```
 gulp unit-tests
-    OR
+ OR
 karma start
 ```
 
