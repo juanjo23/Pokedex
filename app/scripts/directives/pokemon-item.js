@@ -28,11 +28,13 @@ angular.module('pokedexApp')
         $event.preventDefault();
         if(scope.pokemon.caught == 1){
 
-          if(isCaughtCtrl){  // Verifica si estamos en la lista caught
-            scope.confirm_remove_caught = true;
-          }else if(isBattleBoxCtrl){  //Verifica si estamos en la lista battle box
+          if(localStorage[scope.pokemon.name + 'B'] == 1) { //Verifica si el pokemon está en la lista battle box
             scope.showAlert('You cannot un-catch Pokémon that are in your battle box');
-          }else{
+          }
+          else if(isCaughtCtrl){  // Verifica si estamos en la lista caught
+            scope.confirm_remove_caught = true;
+          }
+          else{
             scope.pokemon.caught = 0;
             localStorage[scope.pokemon.name] = 0;
           }      

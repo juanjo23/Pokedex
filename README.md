@@ -32,6 +32,12 @@
  gulp unit-tests
  ```
 
+- End to end tests:
+
+ ```
+ protractor protractor-tests\conf.js
+ ```
+
 
 ## Technical requirements:
 
@@ -55,12 +61,11 @@
 - [x] Test code via Unit Testing
       - [x] All tests must pass (no failures)
       - [ ] Have a 40% code coverage, at least.
-- [ ] Test end-to-end functionality (user stories) with Protractor
-      - [ ] All tests must pass (no failures)
+- [x] Test end-to-end functionality (user stories) with Protractor
+      - [x] All tests must pass (no failures)
 - [ ] Use the Pokéapi v2 public API to obtain the information about the Pokémon: http://pokeapi.co
       - [x] Created an API in express.js instead.
 - [ ] The web application and data should be available offline
 - [x] Use Local Storage for:
       - [x] Battle Box (see Appendix B).
       - [x] Caught list
-
