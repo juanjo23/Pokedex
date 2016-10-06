@@ -1,3 +1,7 @@
+## Demo:
+
+![Demo](demo.gif)
+
 ## Steps to run the app:
 
 1. Install the required dependencies listed in package.json and bower.json:
