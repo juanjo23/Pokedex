@@ -30,8 +30,6 @@ node server.js
 
 ```
 gulp unit-tests
- OR
-karma start
 ```
 
 
