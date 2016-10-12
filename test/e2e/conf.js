@@ -6,7 +6,8 @@ exports.config = {
     'user.story1.spec.js',
     'user.story2.spec.js',
     'user.story3.spec.js',
-    'user.story4.spec.js'
+    'user.story4.spec.js',
+    'user.story5.spec.js'
   ],
   baseUrl: 'http://localhost:8080',
   onPrepare: function(){

@@ -1,4 +1,13 @@
-describe('User Story 4', function(){
+/*
+1. Given the Pokédex main menu is open
+When I tap on the “All Pokemon” button
+Then a list of 151 Pokémon will appear
+And the Pokémon I have in my battle box will display a colored star icon
+And the Pokémon I don’t have in my battle box will display a grayed out star
+icon
+*/
+
+describe('User Story 5', function(){
 	// Acceptance criteria 1
 	describe('Given the Pokédex main menu is open', function(){
 		beforeAll(function(){
@@ -18,7 +27,11 @@ describe('User Story 4', function(){
 			it('Then a list of 151 (28) Pokémon will appear', function(){
 				expect(element.all(by.repeater('pokemon in pokemons')).count()).toEqual(28);
 			});
+		});
+	});
+});
 
+/*
 			it('And the Pokémon I have caught will display a colored PokéBall icon', function(){
 				var caught_pokemon = element.all(by.css('.pokeball-pink')); 
 				expect(caught_pokemon.count()).toBe(0);   //Empty localstorage
@@ -141,6 +154,10 @@ describe('User Story 4', function(){
 				expect(undo_button.isDisplayed()).toBe(false); 
 			});
 		});
+
 	});
 
 });
+
+
+*/
