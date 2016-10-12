@@ -179,6 +179,6 @@ var Server = require('karma').Server;
 
 gulp.task('unit-tests', function (done) {
   return new Server({
-    configFile: __dirname + '/karma.conf.js'
+    configFile: __dirname + '/test/unit-tests/karma.conf.js'
     }, done).start();
 });

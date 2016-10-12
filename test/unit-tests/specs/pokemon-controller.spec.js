@@ -18,6 +18,7 @@ describe('PokemonController', function () {
 			expect( $scope.reverse ).toBe(false);
 			$scope.sort();
 			expect( $scope.reverse ).toBe(true);			
-		});
+		});    
 	});
 });
+

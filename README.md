@@ -32,10 +32,10 @@
  gulp unit-tests
  ```
 
-- End to end tests:
+- End to end tests with protractor:
 
  ```
- protractor protractor-tests\conf.js
+ protractor test\e2e\conf.js
  ```
 
 
@@ -69,3 +69,4 @@
 - [x] Use Local Storage for:
       - [x] Battle Box (see Appendix B).
       - [x] Caught list
+
