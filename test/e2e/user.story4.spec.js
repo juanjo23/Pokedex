@@ -30,13 +30,6 @@ describe('User Story 4', function(){
 	});
 	// Acceptance criteria 2
 	describe('Given the Pokédex is displaying the list of all Pokémon', function(){
-		/*
-		beforeAll(function(){
-			browser.get('/#/pokemon');  //Default route			
-			browser.waitForAngular();  
-		});
-		*/
-
 		describe('When I tap on a grayed out PokéBall icon', function(){
 			beforeAll(function(){
 				//Taped more than one pokeball for future tests
@@ -56,12 +49,6 @@ describe('User Story 4', function(){
 	});
 	// Acceptance criteria 3
 	describe('Given the Pokédex is displaying the list of all Pokémon', function(){
-		/*
-		beforeAll(function(){
-			browser.get('/#/pokemon');  //Default route			
-			browser.waitForAngular();  
-		});
-		*/
 
 		describe('When I tap on a colored PokéBall icon', function(){
 			beforeAll(function(){
@@ -142,12 +129,20 @@ describe('User Story 4', function(){
 				var pokeball_icon = element.all(by.css('.pokeball')).get(0);
 				pokeball_icon.click();
 			});
-			it('Then the removed Pokémon will be re-added to the caught list And the re-added Pokémon will replace the "Undo" button', function(){
-				var undo_button = element.all(by.css('.btn.undo')).get(0);
-				undo_button.click();
-				expect(undo_button.isDisplayed()).toBe(false); 
+			describe('When i tap on the "Undo" button', function(){
+				beforeAll(function(){
+					var undo_button = element.all(by.css('.btn.undo')).get(0);
+					undo_button.click();
+				});
+				it('Then the removed Pokémon will be re-added to the caught list', function(){
+					var removed_pokemon = element.all(by.css('.pokemon-item')).get(0);
+					expect(removed_pokemon.isDisplayed()).toBe(true); 
+				});
+				it('And the re-added Pokémon will replace the "Undo" button', function(){
+					var undo_button = element.all(by.css('.btn.undo')).get(0);
+					expect(undo_button.isDisplayed()).toBe(false); 
+				});
 			});
 		});
 	});
-
 });

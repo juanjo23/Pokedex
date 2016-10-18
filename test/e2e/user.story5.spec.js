@@ -200,17 +200,60 @@ describe('User Story 5', function(){
 				expect(alert.isDisplayed()).toBe(true);
 				expect(alert.getText()).toMatch("You cannot un-catch Pokémon that are in your battle box");
 				browser.ignoreSynchronization = false //Protractor normal behavior
-				
+			});
+			it('And the Pokébal icon will remain colored', function(){
+				var pokeball = element.all(by.css('.pokeball')).get(0);
+				expect(pokeball.getAttribute('class')).toMatch('pokeball-pink');
 			});
 		});
 	});
 
+	//Aceptance criteria 9
+	describe('Given the Pokédex is displaying my battle box', function(){
+
+		describe('When I tap on a colored star icon', function(){
+			beforeAll(function(){
+				var star_icon = element.all(by.css('.battle')).get(0);
+				star_icon.click();			
+			});
+			
+			it('Then the selected Pokémon will be removed to my battle box And a button with the label “Undo” will replace the Pokémon entry', function(){
+				var undo_button = element.all(by.css('.btn.undo')).get(1);
+				expect(undo_button.isDisplayed()).toBe(true); 
+			});
+		});
+	});
+
+	//Aceptance criteria 10
+	describe('Given the Pokédex is displaying my battle box', function(){
+		beforeAll(function(){
+			browser.get('/#/battle-box'); 		
+			browser.waitForAngular();  
+		});
+
+		describe('And a Pokémon was removed by mistake', function(){
+			beforeAll(function(){
+				var star_icon = element.all(by.css('.battle')).get(0);
+				star_icon.click();			
+			});
+
+			describe('When I tap on the "Undo" button', function(){
+				beforeAll(function(){
+					var undo_button = element.all(by.css('.btn.undo')).get(1);
+					undo_button.click();
+				});
+
+				it('Then the removed Pokémon will be re-added to the battle box', function(){
+					var removed_pokemon = element.all(by.css('.pokemon-item')).get(0);
+					expect(removed_pokemon.isDisplayed()).toBe(true); 
+				});
+				it('And the re-added Pokémon will replace the “Undo” button', function(){
+					var undo_button = element.all(by.css('.btn.undo')).get(1);
+					expect(undo_button.isDisplayed()).toBe(false); 
+				});
+			});
+		});
+	});
 });
-
-/*
-Lo que sigue LEEEEEMMMMMME:
-And the PokéBall icon will remain colored
-*/
-
 
 /* browser.ignoreSynchronization=true */

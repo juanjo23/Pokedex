@@ -2,7 +2,6 @@ describe('User story 2', function(){
 	
 	describe('Given the Pokédex main menu is open', function(){
 		beforeAll(function(){
-			browser.get('/#/pokemon');  //Default route
 			var btn_menu = element(by.id('btn-menu'));
 			btn_menu.click();			
 			browser.sleep(500);  //Tiempo de espera por la animación de jQuery
@@ -30,11 +29,6 @@ describe('User story 2', function(){
 	});	
 	
 	describe('Given the Pokédex is displaying the list of all Pokémon', function(){
-		beforeAll(function(){
-			browser.get('/#/pokemon');  //Default route, shows all pokemons
-			browser.waitForAngular();
-		});
-
 		describe('When I tap on the sort button', function(){
 			it('Then the list will be sorted by descending Pokémon number', function(){
 				var sort_button = element(by.css('.sort'));
@@ -52,10 +46,6 @@ describe('User story 2', function(){
 	});
 
 	describe('Given the Pokédex is displaying the list of all Pokémon', function(){
-		beforeAll(function(){
-			browser.get('/#/pokemon');  //Default route, shows all pokemons
-			browser.waitForAngular();
-		});
 
 		describe('When I enter some search text criteria in the input search', function(){
 			it('The list will display only the Pokémon whose name partially or totally matches', function(){

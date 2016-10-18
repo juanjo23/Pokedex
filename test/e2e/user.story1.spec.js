@@ -9,11 +9,11 @@ describe('User story 1', function(){
 		
 		it('Then a menu will expand', function(){
 			var menu_expanded = element(by.css('.navbar-collapse.collapse.in'));
-			expect(menu_expanded.isPresent()).toBe(true);
+			expect(menu_expanded.isDisplayed()).toBe(true);
 		});
 		it('And the main menu button will be replaced by a close button', function(){
-			var close_button = element(by.css('.glyphicon-remove'));
-			expect(close_button.isPresent()).toBe(true);
+			var menu_icon = element.all(by.css('.glyphicon')).get(0);
+			expect(menu_icon.getAttribute('class')).toMatch('glyphicon-remove');
 		});
 		it('And there will be a button labeled "All Pokémon"', function(){
 			var menu = element.all(by.css('ul > li')).get(0);
@@ -31,10 +31,7 @@ describe('User story 1', function(){
 
 	describe('When I tap on the close button', function(){
 		beforeAll(function(){
-			browser.get('http://localhost:8080/#/pokemon');  //Default route
 			var btn_menu = element(by.id('btn-menu'));
-			btn_menu.click();			
-			browser.sleep(500);  //Tiempo de espera por la animación de jQuery
 			btn_menu.click();			
 			browser.sleep(500);
 		});
@@ -45,7 +42,7 @@ describe('User story 1', function(){
 		});
 		it('And the close button will be replaced by the main menu button', function(){
 			var close_button = element(by.css('.glyphicon-menu-hamburger'));
-			expect(close_button.isPresent()).toBe(true);
+			expect(close_button.isDisplayed()).toBe(true);
 		});
 	});
 });
