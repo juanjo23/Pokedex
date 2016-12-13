@@ -7,7 +7,7 @@
 1. Install the required dependencies listed in package.json and bower.json:
 
  ```
- npm install & bower install
+ npm install && bower install
  ```
 
 2. Run automated tasks and get the dist folder
